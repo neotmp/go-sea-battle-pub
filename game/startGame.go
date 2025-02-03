@@ -7,13 +7,6 @@ import (
 
 func (g *Game) StartGame() (*Game, error) {
 
-	// 1. Create a new game instance
-	// 2. COMPUTER Deploys its fleet
-	// 3. Save game profile
-	// 4. Send game profile to HUMAN
-	// 5. HUMAN deploys their fleet, sends game profile to server
-	// 6. Save game profile, send game profile
-
 	// Initializing two arrays with zeros
 	gOne := new([100]int32)
 	gTwo := new([100]int32)
@@ -41,8 +34,6 @@ func (g *Game) StartGame() (*Game, error) {
 	if err != nil {
 		return g, err
 	}
-
-	fmt.Println(write.Id, "Id From Db")
 
 	return write, nil
 

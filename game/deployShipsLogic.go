@@ -43,7 +43,6 @@ func (g *Game) placeShip(pos []int, number int) (*Game, bool, error) {
 	}
 
 	for _, vv := range h {
-		//fmt.Println("INSERTED at Index, value", vv, number)
 		g.GridComp[vv] = int32(number)
 
 	}
@@ -86,8 +85,6 @@ func (g *Game) checkCellsAvailability(lenght, number, cell, axis, direction int)
 
 		}
 
-		//fmt.Println(cells, ship, "Cells - Ship")
-
 	} else {
 
 		if direction == 0 { // we add 1
@@ -117,8 +114,6 @@ func (g *Game) checkCellsAvailability(lenght, number, cell, axis, direction int)
 			}
 
 		}
-
-		//fmt.Println(cells, ship, "Cells - Ship, +1/-1")
 
 	}
 
@@ -188,8 +183,6 @@ func (g *Game) DeployShipsLogic() (*Game, error) {
 
 			cell, axis, direction := whereTo()
 
-			//fmt.Println(len(ships), "Ships lenght")
-
 			// WE need to check here
 			_, ok, err := g.placeShip(g.checkCellsAvailability(int(v.Lenght), int(v.Number), int(cell), int(axis), int(direction)))
 			if err != nil {
@@ -198,19 +191,11 @@ func (g *Game) DeployShipsLogic() (*Game, error) {
 
 			if ok {
 				do = false
-				//ships = append(ships[:i], ships[i+1:]...)
-				//fmt.Printf("I just removed ship at index: %d", i)
 			}
 
-			//fmt.Println(deploy.GridComp, ok, "comp Grid")
 		}
 
 	}
-
-	// update, err := g.DbUpdate()
-	// if err != nil {
-	// 	return g, err
-	// }
 
 	return g, nil
 }

@@ -1,15 +1,11 @@
 package game
 
 import (
-	"fmt"
-
 	"github.com/lib/pq"
 	"github.com/neotmp/go-sea-battle/database"
 )
 
 func (g *Game) DbWrite() (*Game, error) {
-
-	fmt.Println(g, "GOT HERE")
 
 	qr := `INSERT INTO games (grid_h, grid_c, whose_turn, won_by, started_at, lost_h, lost_c, deployed, modified_at) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id`
 

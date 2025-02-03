@@ -1,15 +1,11 @@
 package game
 
 import (
-	"fmt"
-
 	"github.com/lib/pq"
 	"github.com/neotmp/go-sea-battle/database"
 )
 
 func (g *Game) DbUpdate() (*Game, error) {
-
-	fmt.Println(g.Id, "IDDD")
 
 	q := `UPDATE games SET
 	whose_turn = $1,
@@ -34,7 +30,6 @@ func (g *Game) DbUpdate() (*Game, error) {
 		&g.Deployed,
 		&g.Id,
 	).Scan(&g.Id); err != nil {
-		fmt.Println(err, "HERE34")
 		return g, err
 	}
 

@@ -65,9 +65,11 @@ func Play(c *fiber.Ctx) error {
 
 	}
 
+	play.MaskShips()
+
 	// human takes their shot
 
-	fmt.Println(play.LostComp, play.LostHuman, "FINAL LOST COMP HUMAN")
+	//fmt.Println(play.LostComp, play.LostHuman, "FINAL LOST COMP HUMAN")
 
 	return c.JSON(play)
 }

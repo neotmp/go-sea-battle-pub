@@ -1,8 +1,6 @@
 package api
 
 import (
-	"fmt"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/neotmp/go-sea-battle/database"
 	"github.com/neotmp/go-sea-battle/game"
@@ -12,7 +10,7 @@ func Check(c *fiber.Ctx) error {
 
 	i := c.Cookies("gameId")
 
-	fmt.Println(i, "Got ID in cookie")
+	//fmt.Println(i, "Got ID in cookie")
 
 	//g := 1
 	r := new(game.Game)

@@ -10,7 +10,6 @@ func (g *Game) DbRead() (*Game, error) {
 	qr := `SELECT id, grid_h, grid_c, whose_turn, won_by, started_at, lost_h, lost_c, deployed, modified_at FROM games WHERE id = $1`
 
 	if err := database.DB.QueryRow(qr,
-		//&g.Id,
 		g.Id,
 	).Scan(
 		&g.Id,

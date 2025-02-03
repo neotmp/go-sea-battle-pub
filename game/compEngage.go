@@ -10,11 +10,6 @@ import (
 // FireAtWill returns all slice indeces that are not Hit && Miss, i.e. whose value is not 8 OR 9
 // From this array we randomly pick a number to fire a shot at
 func (g *Game) FireAtWill() ([]int32, error) {
-	// read, err := g.DbRead()
-
-	// if err != nil {
-	// 	return []int32{}, err
-	// }
 
 	var shotsAvailable []int32
 
@@ -35,11 +30,6 @@ func (g *Game) FireAtWill() ([]int32, error) {
 }
 
 func randomInteger(s []int32) (int32, error) {
-
-	// s, err := g.FireAtWill()
-	// if err != nil {
-	// 	return 0, err
-	// }
 
 	// TO DO Make it look better
 	rand.Seed(uint64(time.Now().UnixNano() * 99))
@@ -72,17 +62,12 @@ func (g *Game) ComputerEngage() (*Game, error) {
 			g.GridHuman[aim] = int32(d)
 			g.DbWriteShot(p, d, c)
 			g.WhoseTurn = 1
-			//g.DbUpdate()
-			//fmt.Println(g.GridHuman[aim], "Got cell-1")
-			//fmt.Println("Direct Hit")
+
 		} else {
 			p, c, d := g.CalculateDamage(int(aim))
 			g.GridHuman[aim] = int32(d)
 			g.DbWriteShot(p, d, c)
 			g.WhoseTurn = 1
-			//g.DbUpdate()
-			//fmt.Println(g.GridHuman[aim], "Got Cell-0")
-			//fmt.Println("A Miss")
 
 		}
 	}
