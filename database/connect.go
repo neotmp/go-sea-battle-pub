@@ -19,7 +19,7 @@ func Connect() {
 		log.Fatalf("unable to load .env file: %e", err)
 	}
 
-	conString := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=%s", os.Getenv("AWS_HOST"), os.Getenv("AWS_PORT"), os.Getenv("AWS_USER"), os.Getenv("AWS_PASSWORD"), os.Getenv("AWS_DBNAME"), os.Getenv("AWS_SSLMODE"))
+	conString := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=%s", os.Getenv("HOST"), os.Getenv("PORT"), os.Getenv("USER"), os.Getenv("PASSWORD"), os.Getenv("DBNAME"), os.Getenv("SSLMODE"))
 
 	// Connect to database
 	database, err := sql.Open("postgres", conString)
