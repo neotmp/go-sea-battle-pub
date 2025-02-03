@@ -29,9 +29,9 @@ I think it’s a really nice challenge from algorithm standpoint.
 
 I’m not sure if I will implement salvo in Advance Mode. I’ll circle back to it later.
 
-Statistical Mode
+Statistical Mode (a.k.a ML, a.k.a AI)
 
-Again, is all about optimizing and enhancing computer’s ability to beat a human player. This time changes affect not only how computer target human’s fleet (offensive side), but also how computer deploy its capabilities (defensive side). Computer uses past data to find places on the grid that are least likely to be targeted by human. The same goes with Search and Destroy tactics. Computer targets areas that according to collected data have highest probabilities of having human fleet deployed there. Visually, it may be presented as a heatmap. You target the hottest areas and if you get some you go into a “Terminator Mode” and destroy enemy’s ship.
+Again, it is all about optimizing and enhancing computer’s ability to beat a human player. This time changes affect not only how computer target human’s fleet (offensive side), but also how computer deploy its capabilities (defensive side). Computer uses past data to find places on the grid that are least likely to be targeted by human. The same goes with Search and Destroy tactics. Computer targets areas that according to collected data have highest probabilities of having human fleet deployed there. Visually, it may be presented as a heatmap. You target the hottest areas and if you get some you go into a “Terminator Mode” and destroy enemy’s ship.
 
 Apart from Human v. Computer Mode I also have plans to allow Human v. Human Mode. Where players can send invitations and meet one another to duke it out online.
 
